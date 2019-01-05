@@ -3,6 +3,7 @@
   import Logo from '~/components/Logo.vue'
 
   export default {
+
     components: {
       Logo
     },
@@ -96,8 +97,6 @@
 
         this.registerListeners();
 
-
-
       },
 
       registerListeners() {
@@ -169,9 +168,7 @@
       },
 
       resetResults() {
-
         this.results = _.clone(this.defaults);
-
       },
 
       drawFeaturePoints(img, featurePoints) {
@@ -190,12 +187,11 @@
           contxt.stroke();
 
         }
+
       },
 
       convertEmotion(val) {
-
         return val.toFixed ? Number(val.toFixed(0)) : val;
-
       },
 
       parseFaceResults(face) {
@@ -218,14 +214,13 @@
       log(line) {
 
         if(this.testing) {
-
           console.log(line);
-
         }
 
       }
 
     }
+
   }
 </script>
 
